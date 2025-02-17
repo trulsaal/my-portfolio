@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@config '../tailwind.config.js';
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+@font-face {
+  font-family: "Neue montreal";
+  src: url("/NeueMontreal-Regular.otf");
+}
+
+@font-face {
+  font-family: "Neue montreal bold";
+  src: url("/NeueMontreal-bold.otf");
+}
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: Neue Montreal;
+  font-weight: 400;
+}
+
+.nav-button {
+  @apply mr-12 text-gray-500;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.preview-text {
+  @apply text-lg;
+}
+
+.pulsate {
+  animation: pulsate 3s ease-in;
+  animation-iteration-count: infinite;
+  color: slategray;
+}
+
+@keyframes pulsate {
+  0% {
+    color: black;
+  }
+  50% {
+    color: hsl(208, 17%, 22%);
+  }
+  100% {
+    color: black;
+  }
+}
+
+.appear {
+  @apply transition-all duration-100
+  delay-75
+  ease-in;
+}
+
+.hidden {
+  @apply transition-all duration-0 blur-xs -translate-x-full;
+}
+
+.show {
+  @apply blur-none translate-x-0 delay-75 ease-in;
+}
+
+.header-icon {
+  @apply w-fit size-10 h-full;
+}
+
+.isVisible {
+  background-color: red;
+}
