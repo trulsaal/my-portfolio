@@ -23,13 +23,13 @@ const InfoHero = () => {
       className="bg-[#afadae] grid grid-cols-2 items-center h-[600px] p-24
     "
     >
-      <div className="flex flex-wrap p-4 rounded-lg h-96 items-center justify-center text-2xl">
+      <div className="flex flex-wrap py-4 rounded-lg h-96 items-center justify-center text-2xl">
         <a
-          className="text-black text-[100px] leading-[55px] tracking-tighter bold w-full text-center hover:text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] cursor-pointer
+          className="text-black text-[100px] leading-[55px] tracking-tighter bold w-fit text-center hover:text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] cursor-pointer transition-all duration-200
 "
           href="#section1"
         >
-          check out my work
+          check out <br /> my work
         </a>
       </div>
       <div className="flex">
